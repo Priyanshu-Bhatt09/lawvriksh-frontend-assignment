@@ -1,0 +1,74 @@
+/* src/components/TodayTask.css */
+/* .today-task {
+  grid-column: span 2; Will take 2 grid columns
+} */
+
+.task-tabs {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.task-tab {
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.task-tab.active {
+  color: var(--brand-primary);
+  font-weight: 600;
+  border-bottom-color: var(--brand-primary);
+}
+
+.task-tab span {
+  background-color: var(--bg-color);
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  margin-left: 6px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-status-icon {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.task-status-icon.approved {
+  color: var(--status-approved);
+}
+
+.task-text {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}

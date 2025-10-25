@@ -1,0 +1,127 @@
+/* src/pages/Dashboard.css */
+.dashboard-grid {
+  display: grid;
+  /* This creates a 12-column flexible grid. 
+    It's the standard for responsive layouts.
+  */
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.overview-header {
+  grid-column: 1 / -1; /* Span all 12 columns */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.overview-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* MAIN LAYOUT RULES 
+  This is the part that fixes your problem.
+*/
+
+/* --- Row 1: Overview Cards --- */
+/* Each card takes 3 of 12 columns (12 / 4 cards = 3) */
+.stat-card {
+  grid-column: span 3;
+}
+
+/* --- Row 2: Summary + Progress --- */
+/* ProjectSummary takes 7 of 12 columns */
+.project-summary {
+  grid-column: span 7;
+}
+/* OverallProgress takes the remaining 5 of 12 columns */
+.overall-progress {
+  grid-column: span 5;
+}
+
+/* --- Row 3: Task + Workload --- */
+/* TodayTask takes 7 of 12 columns */
+.today-task {
+  grid-column: span 7;
+}
+/* ProjectsWorkload takes the remaining 5 of 12 columns */
+.projects-workload {
+  grid-column: span 5;
+}
+
+
+/* RESPONSIVENESS 
+  This is what makes it look good when not zoomed out.
+*/
+
+/* --- Tablet (e.g., iPads) --- */
+@media (max-width: 1200px) {
+  /* Make stat cards 2x2 */
+  .stat-card {
+    grid-column: span 6; /* Each card takes 6 of 12 columns */
+  }
+
+  /* Stack the main components */
+  .project-summary,
+  .overall-progress,
+  .today-task,
+  .projects-workload {
+    grid-column: 1 / -1; /* Make each one full-width */
+  }
+}
+
+/* --- Mobile (e.g., iPhones) --- */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .sidebar-nav, .sidebar-footer { display: none; }
+  .sidebar-header { margin: 0; }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .header-controls {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  .search-bar { width: 100%; }
+
+  /* Stack stat cards 1-per-row */
+  .stat-card {
+    grid-column: 1 / -1; /* Make each one full-width */
+  }
+  
+  .project-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  /* Mobile table styles */
+  .project-table-header { display: none; }
+  .project-table-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+  }
+  .project-table-row span,
+  .project-table-row .project-progress {
+    grid-column: span 1;
+  }
+  .project-table-row span:nth-child(2)::before { content: 'Manager: '; font-weight: 600; }
+  .project-table-row span:nth-child(3)::before { content: 'Due: '; font-weight: 600; }
+}

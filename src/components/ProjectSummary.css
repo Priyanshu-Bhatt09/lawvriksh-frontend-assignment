@@ -1,0 +1,50 @@
+/* src/components/ProjectSummary.css */
+/* .project-summary {
+  /* grid-column: span 2; Will take 2 grid columns */
+
+
+.project-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.project-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-table-header,
+.project-table-row {
+  /* display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr 1.5fr; */
+  align-items: center;
+  padding: 12px 0;
+  font-size: 0.9rem;
+}
+
+.project-table-header {
+  color: var(--text-secondary);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.project-table-row {
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.project-table-row:last-child {
+  border-bottom: none;
+}
+
+.project-table-row .project-name {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.project-progress {
+  width: 90%;
+}

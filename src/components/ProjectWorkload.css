@@ -1,0 +1,60 @@
+/* src/components/ProjectsWorkload.css */
+/* .projects-workload {
+  grid-column: span 1; /* Will take 1 grid column */
+
+
+.workload-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 250px;
+  padding: 20px 0;
+}
+
+.workload-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.workload-bar-container {
+  display: flex;
+  flex-direction: column-reverse; /* Stacks dots from bottom up */
+  gap: 4px;
+  width: 20px; /* Controls width of the 'bar' */
+  align-items: center;
+  position: relative;
+}
+
+.workload-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--text-light);
+}
+
+.workload-dot.empty {
+  border-color: var(--border-color);
+}
+.workload-dot.filled {
+  background-color: var(--text-light);
+}
+
+/* Highlight the max value bar */
+.workload-badge {
+  position: absolute;
+  top: -25px; /* Position above the bar */
+  background-color: var(--status-on-going);
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.workload-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}

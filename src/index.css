@@ -1,0 +1,141 @@
+/* src/index.css */
+:root {
+  --font-family: 'Poppins', sans-serif;
+  
+  /* === Color Palette Corrected from Image === */
+  --bg-color: #ebdfd7;             /* Main background */
+  --sidebar-bg: #060606;          /* Sidebar background */
+  --card-bg: #f2eae5;             /* Card background */
+  
+  --text-primary: #1F2129;       /* Dark text */
+  --text-secondary: #7A7C86;      /* Medium gray text */
+  --text-light: #BDBEC3;          /* Light gray text */
+  
+  --border-color: #F0F0F0;       /* Light border for tables/inputs */
+  
+  --brand-primary: #F97316;      /* Main Orange (from logo/button) */
+  --brand-light: #FFF5F0;        /* Light Orange (active link bg) */
+  
+  /* Status: Completed / Approved (Green) */
+  --status-completed: #34C759;
+  --status-completed-bg: #EBFBF1;
+  --status-approved: #34C759;
+  --status-approved-bg: #EBFBF1;
+
+  /* Status: On Going (Brand Orange) */
+  --status-on-going: var(--brand-primary);
+  --status-on-going-bg: var(--brand-light);
+
+  /* Status: Delayed / At Risk (Red) */
+  --status-delayed: #EF4444;
+  --status-delayed-bg: #FEF2F2;
+  --status-at-risk: #EF4444;
+  --status-at-risk-bg: #FEF2F2;
+
+  /* Status: In Review (Blue) */
+  --status-in-review: #3B82F6;
+  --status-in-review-bg: #EFF6FF;
+
+  /* === Layout === */
+  --card-border-radius: 20px;
+  --layout-padding: 24px;
+  --card-shadow: 0px 8px 24px rgba(26, 26, 26, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: var(--layout-padding);
+  overflow-y: auto;
+}
+
+/* Base Card Style */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+/* NOTE: The hover effect in the image is very subtle, 
+  if it exists at all. You can simplify this.
+*/
+.card:hover {
+  transform: translateY(-2px); /* Less dramatic */
+  box-shadow: 0px 10px 24px rgba(26, 26, 26, 0.06);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Utility Classes */
+.dropdown-filter {
+  /* This was the other error. It should be white. */
+  background: var(--card-bg); 
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: var(--font-family);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Status styles now use the corrected variables */
+.status-completed { background-color: var(--status-completed-bg); color: var(--status-completed); }
+.status-on-going { background-color: var(--status-on-going-bg); color: var(--status-on-going); }
+.status-delayed { background-color: var(--status-delayed-bg); color: var(--status-delayed); }
+.status-at-risk { background-color: var(--status-at-risk-bg); color: var(--status-at-risk); }
+.status-approved { background-color: var(--status-approved-bg); color: var(--status-approved); }
+.status-in-review { background-color: var(--status-in-review-bg); color: var(--status-in-review); }
+
+/* Progress Bar */
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
