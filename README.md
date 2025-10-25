@@ -25,7 +25,7 @@ You must have [Node.js](https://nodejs.org/) (which includes `npm`) installed on
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/promage-dashboard.git](https://github.com/your-username/promage-dashboard.git)
+    git clone [https://github.com/your-username/lawvriksh-frontend-assignment](https://github.com/Priyanshu-Bhatt09/lawvriksh-frontend-assignment)
     cd promage-dashboard
     ```
 
