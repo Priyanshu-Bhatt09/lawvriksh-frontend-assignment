@@ -1,5 +1,7 @@
 # Promage - Project Management Dashboard
 
+**[View Live Demo](https://lawvriksh-frontend-assignment-flax.vercel.app/)**
+
 A responsive frontend for a project management dashboard, built with React.js from a Figma design. This project focuses on a clean, 1:1 implementation of the design with a strong emphasis on responsive layout and purposeful micro-interactions based on established UX laws.
 
 ![Project Screenshot](screenshot.png)
