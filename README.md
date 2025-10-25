@@ -26,7 +26,7 @@ You must have [Node.js](https://nodejs.org/) (which includes `npm`) installed on
 1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/Priyanshu-Bhatt09/lawvriksh-frontend-assignment.git]
-    cd promage-dashboard
+    cd lawvriksh-frontend-assignment
     ```
 
 2.  **Install dependencies:**
