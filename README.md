@@ -2,7 +2,7 @@
 
 A responsive frontend for a project management dashboard, built with React.js from a Figma design. This project focuses on a clean, 1:1 implementation of the design with a strong emphasis on responsive layout and purposeful micro-interactions based on established UX laws.
 
-![Project Screenshot](Screenshot 2025-10-25 114902.png)
+![Project Screenshot](Screenshot 2025-10-25 at 13-55-34 assignment.png)
 
 ## Tech Stack
 
